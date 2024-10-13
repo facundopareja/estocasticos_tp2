@@ -6,7 +6,6 @@ measurements_microseconds = np.loadtxt("geiger.csv",
                  delimiter=",", dtype=int)
 
 # a)
-
 last_value = 0
 time_delta = []
 for i in range(len(measurements_microseconds)):
