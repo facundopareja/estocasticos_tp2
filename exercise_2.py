@@ -49,7 +49,7 @@ sns.histplot(occurrence_array, discrete=True, stat='probability')
 plt.show()
 
 # c)
-x = np.arange(0, 15)
+x = np.arange(0, 9)
 pmf_values = poisson.pmf(x, median_ocurrences)
 plt.stem(x, pmf_values, basefmt=" ")
 plt.title(f'Distribucion Poisson (λ = {median_ocurrences})')
