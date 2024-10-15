@@ -32,7 +32,10 @@ variance_time = median_time_delta_squared - np.power(median_time, 2)
 print(f"La varianza estimada es: {variance_time}")
 
 # b)
-sns.histplot(measurements_time_delta)
+sns.histplot(measurements_time_delta, stat='probability')
+plt.title('Histograma')
+plt.xlabel('Tiempo entre eventos (pulsos)')
+plt.ylabel('Probabilidad')
 plt.show()
 
 # c)
@@ -43,4 +46,6 @@ x_values = np.linspace(0, 7000000, 20000000)
 y_values = exponential_pdf(x_values, 1/median_time)
 
 plt.plot(x_values, y_values)
+plt.title('Funcion de densidad de probabilidad teorica')
+plt.xlabel('Tiempo entre eventos (pulsos)')
 plt.show()
